@@ -1,23 +1,26 @@
 [app]
-  name = "mcenter"
+  name = "cmdb"
 
 [http]
   # HTTP服务端口
-  port = 7080
+  port = 7010
 
 [grpc]
   # Server监听的端口
-  port = 17080
-
+  port = 17010
 
 [mongodb]
   endpoints = ["dds-8vb5e579cddbaaa41100-pub.mongodb.zhangbei.rds.aliyuncs.com:3717"]
-  database = "zdb"
+  database = "cmdb"
   username = "root"
   password = "qiKAI!!395166"
-
 
 [apidoc]
   # Swagger API Doc URL路径, 默认自动生成带前缀的地址比如: /default/api/v1/apidoc 
   # 你也可以在这里直接配置绝对路径 比如: /apidocs.json
   path = "/apidocs.json"
+
+[mcenter]
+address = "127.0.0.1:17080"
+client_id = "M7LmSqFgitbqE9sckoZP2vZY"
+client_secret = "ZcpbNEftiIP04ErVdEn29mHosTYYr0FL"
