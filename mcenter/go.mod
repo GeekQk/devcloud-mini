@@ -3,7 +3,7 @@ module github.com/GeekQk/devcloud-mini/mcenter
 go 1.21.0
 
 require (
-	github.com/infraboard/mcenter v0.0.27
+	github.com/infraboard/mcenter v0.0.28
 	github.com/infraboard/mcube/v2 v2.0.9
 	github.com/spf13/cobra v1.8.0
 	github.com/swaggo/swag v1.16.3

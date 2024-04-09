@@ -49,7 +49,10 @@ func (h *handler) Init() error {
 			Metadata("Resource", "Secret").
 			Metadata("Action", "Create").
 			// 开启了鉴权
-			Metadata(label.Auth, label.Enable),
+			Metadata(label.Auth, label.Enable).
+			//资源描述
+			Metadata(label.Resource, "Secret").
+			Metadata(label.Action, label.Create.Value()),
 	)
 
 	return nil

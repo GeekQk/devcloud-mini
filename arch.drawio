@@ -1,14 +1,44 @@
 <mxfile host="65bd71144e">
     <diagram id="NJrrmo7_fxR8gCAdu7vv" name="第 1 页">
-        <mxGraphModel dx="1028" dy="416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1106" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="69" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="45">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="880" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="695" y="920"/>
+                            <mxPoint x="100" y="920"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" value="功能注册" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="69">
+                    <mxGeometry x="-0.5262" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="45" value="vblog" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="610" y="640" width="170" height="210" as="geometry"/>
                 </mxCell>
+                <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="44" target="28">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="515" y="920"/>
+                            <mxPoint x="102" y="920"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="44" value="vblog" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="430" y="640" width="170" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="43" target="28">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="329" y="920"/>
+                            <mxPoint x="102" y="920"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="43" value="vblog" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="244" y="640" width="170" height="210" as="geometry"/>
@@ -73,15 +103,15 @@
                     <mxGeometry x="25" y="170" width="760" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" value="vblog" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="17" y="640" width="170" height="210" as="geometry"/>
+                    <mxGeometry x="17" y="660" width="170" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="user" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="47" y="760" width="120" height="50" as="geometry"/>
+                    <mxGeometry x="47" y="755" width="120" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="token" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="47" y="690" width="120" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="blog" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="31" value="cmdb" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="260" y="690" width="120" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="comment" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -90,7 +120,7 @@
                 <mxCell id="37" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="33" target="30" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="rpc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="37" vertex="1" connectable="0">
+                <mxCell id="47" value="rpc: token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="37" vertex="1" connectable="0">
                     <mxGeometry x="-0.12" y="-2" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -101,13 +131,18 @@
                 <mxCell id="50" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="35" target="28" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="54" value="login: token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="50">
+                    <mxGeometry x="0.2414" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="35" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
                     <mxGeometry x="157" y="530" width="30" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="39" value="mcenter接入中间件" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="460" y="700" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="..." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="40" value="vblog" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="635" y="685" width="120" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" value="mcenter接入中间件" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -116,11 +151,64 @@
                 <mxCell id="48" value="用户中心" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="17" y="610" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="52" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.465;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="49" target="43">
+                <mxCell id="52" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.465;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="49" target="43" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="52">
+                    <mxGeometry x="0.3457" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="49" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
                     <mxGeometry x="399" y="540" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="&lt;h1&gt;鉴权&lt;/h1&gt;&lt;p&gt;谁:&amp;nbsp; &amp;nbsp;服务:资源&amp;nbsp; &amp;nbsp;操作&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="23" y="930" width="190" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="56" target="58">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Role(运维/开发/测试)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="23" y="1150" width="297" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="57" target="56">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Policy(策略引擎)&lt;br&gt;&lt;br&gt;UserId&amp;nbsp; &amp;nbsp; &amp;nbsp; Role&amp;nbsp; &amp;nbsp; Namspace&amp;nbsp; &amp;nbsp;Expired&amp;nbsp; &amp;nbsp; &amp;nbsp;Env" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="23" y="1060" width="297" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="功能&amp;nbsp;&lt;br&gt;&lt;br&gt;服务:资源 操作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="25" y="1240" width="95" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="功能&amp;nbsp;&lt;br&gt;&lt;br&gt;服务:资源 操作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="35" y="1250" width="95" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="功能&amp;nbsp;&lt;br&gt;&lt;br&gt;服务:资源 操作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="45" y="1260" width="95" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="功能(Endpoint)&amp;nbsp;&lt;br&gt;&lt;br&gt;服务:资源 操作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="55" y="1270" width="95" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="Endpoint" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="45" y="820" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="71" target="61">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="390" y="1075"/>
+                            <mxPoint x="390" y="1380"/>
+                            <mxPoint x="103" y="1380"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="71" value="&lt;h1&gt;功能注册&lt;/h1&gt;&lt;p&gt;怎么抽取 每个用户的 功能列表:&lt;/p&gt;&lt;p&gt;资源: 操作(http url / method)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;WebFramework:&amp;nbsp; Gin/Gorestful&lt;/p&gt;&lt;p&gt;获取到当前的接口列表(接口装饰)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;GIn 可以选择手动维护功能列表&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="950" width="190" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;h1&gt;授权过程&lt;/h1&gt;&lt;p&gt;1. 功能注册&lt;/p&gt;&lt;p&gt;2.&amp;nbsp; 创建Role&lt;/p&gt;&lt;p&gt;3.&amp;nbsp; 策略授权&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="1230" width="190" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="&lt;h1&gt;鉴权过程&lt;/h1&gt;&lt;p&gt;1.&amp;nbsp; &amp;nbsp;用户访问服务功能(接口)&lt;/p&gt;&lt;p&gt;2.&amp;nbsp; &amp;nbsp;接口(Resource:Action)&amp;nbsp; mcenter 确认用户权限&lt;/p&gt;&lt;p&gt;3.&amp;nbsp; &amp;nbsp;通过/失败&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="1380" width="300" height="140" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

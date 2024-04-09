@@ -100,8 +100,8 @@ github.com/hinshun/vt10x v0.0.0-20220119200601-820417d04eec h1:qv2VnGeEQHchGaZ/u
 github.com/hinshun/vt10x v0.0.0-20220119200601-820417d04eec/go.mod h1:Q48J4R4DvxnHolD5P8pOtXigYlRuPLGl6moFx3ulM68=
 github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
 github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
-github.com/infraboard/mcenter v0.0.27 h1:smMj88w8sp2QjmZkyZWoNkiQhm81lpdCY+hNISmc/Ps=
-github.com/infraboard/mcenter v0.0.27/go.mod h1:ikNcE/o/QGuKcWHO/TF2XjimEnrSdWk8yZmZ70P7lfA=
+github.com/infraboard/mcenter v0.0.28 h1:D67rfroxhnQHOl0QMVRgfPh/Ilh+y7Ii/Q+geThcovI=
+github.com/infraboard/mcenter v0.0.28/go.mod h1:ikNcE/o/QGuKcWHO/TF2XjimEnrSdWk8yZmZ70P7lfA=
 github.com/infraboard/mcube/v2 v2.0.9 h1:KpccZn0yc6MSeuBlSwrIJN8S6emEZBVqBXc8XQJq7fI=
 github.com/infraboard/mcube/v2 v2.0.9/go.mod h1:OHaHFYcM+FsyIuXJLQG8V7VypjQdxHfQN7iC8L04FDY=
 github.com/josharian/intern v1.0.0 h1:vlS4z54oSdjm0bgjRigI+G1HpF+tI+9rE5LLzOg8HmY=

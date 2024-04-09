@@ -16,6 +16,9 @@ import (
 	_ "github.com/infraboard/mcenter/clients/rpc/middleware/auth/gorestful"
 	// 基于Grpc Service服务的 Validate ClientId/ClientSecret 的grpc认证中间件
 	_ "github.com/infraboard/mcenter/clients/rpc/middleware/auth/grpc"
+
+	//服务功能列表中间件
+	_ "github.com/infraboard/mcenter/clients/rpc/middleware/registry/endpoint"
 )
 
 func main() {
