@@ -10,7 +10,8 @@
   port = 17010
 
 [mongodb]
-  endpoints = ["dds-8vb5e579cddbaaa41100-pub.mongodb.zhangbei.rds.aliyuncs.com:3717"]
+  #mongodb实例
+  endpoints = ["dds-8vb7b6aa1f4cb8341410-pub.mongodb.zhangbei.rds.aliyuncs.com:3717"]
   database = "cmdb"
   username = "root"
   password = "qiKAI!!395166"
