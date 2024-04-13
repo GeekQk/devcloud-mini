@@ -1,12 +1,13 @@
-package main
+package system
 
-import (
-	"test/system"
-)
+import "fmt"
+
+func init() {
+	fmt.Println("init: impl")
+}
 
 type Host struct {
 	IP       string `json:"ip"`
-	Name     string `json:"name"`
 	Port     int    `json:"port"`
 	Idc      string `json:"idc"`
 	Zone     string `json:"zone"`
@@ -14,8 +15,6 @@ type Host struct {
 	Status   string `json:"status"`
 }
 
-func main() {
-	a := system.Host{}
-	a.CreateHost("127.0.0.1")
-
+func (i *Host) GetInfo() string {
+	return i.IP
 }
