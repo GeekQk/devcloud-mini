@@ -4,6 +4,7 @@ go 1.21.0
 
 require (
 	github.com/emicklei/go-restful/v3 v3.12.0
+	github.com/go-playground/validator/v10 v10.19.0
 	github.com/infraboard/mcenter v0.0.28
 	github.com/infraboard/mcube/v2 v2.0.10
 	github.com/rs/xid v1.5.0
@@ -35,7 +36,6 @@ require (
 	github.com/go-openapi/swag v0.23.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
-	github.com/go-playground/validator/v10 v10.19.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.19.0 // indirect

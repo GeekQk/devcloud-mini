@@ -20,7 +20,7 @@ var (
 func init() {
 	// 开启配置文件读取配置
 	os.Setenv("MONGO_DATABASE", "cmdb")
-	os.Setenv("MONGO_ENDPOINTS", "zdb-cls.cu9pn42.mongodb.net:27017")
+	os.Setenv("MONGO_ENDPOINTS", "dds-bp1ef8a2abb33ef41762-pub.mongodb.rds.aliyuncs.com:3717")
 	os.Setenv("MONGO_USERNAME", "dbuser")
 	os.Setenv("MONGO_PASSWORD", "qiKAI!!395166")
 	ioc.DevelopmentSetup()
