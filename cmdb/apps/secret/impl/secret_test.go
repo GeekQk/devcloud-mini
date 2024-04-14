@@ -1,7 +1,9 @@
 package impl_test
 
 import (
+	"fmt"
 	"testing"
+	"time"
 
 	"github.com/GeekQk/devcloud-mini/cmdb/apps/secret"
 )
@@ -28,4 +30,20 @@ func TestDescribeSecret(t *testing.T) {
 	}
 	res.Desense()
 	t.Log(res)
+}
+
+func TestSyncResource(t *testing.T) {
+	req := &secret.SyncResourceRequest{
+		SecretId: "cod36eh97i69ji730se0",
+	}
+	err := impl.SyncResource(ctx, req, func(sr *secret.SyncResponse) {
+		// 宝塔Linux面板-OhOn[lhins-leelowed]  [OK]
+		fmt.Println(sr)
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	// 保证当前进程不退出
+	time.Sleep(5 * time.Second)
 }

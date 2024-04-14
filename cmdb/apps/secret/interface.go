@@ -33,7 +33,7 @@ type SyncResponse struct {
 
 type SyncResourceRequest struct {
 	// secret id
-	Id string
+	SecretId string
 	// 同步那些区域的资源
 	Region []string
 	// 同步那些类型的资源

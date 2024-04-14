@@ -155,7 +155,7 @@ message Spec {
     string category = 7;
     // 规格
     // @gotags: json:"type"
-    string type = 8;
+     string type = 8;
     // 描述
     // @gotags: json:"description"
     string description = 9;

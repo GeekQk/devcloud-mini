@@ -148,8 +148,10 @@ github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsT
 github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
 github.com/swaggo/swag v1.16.3 h1:PnCYjPCah8FK4I26l2F/KQ4yz3sILcVUN3cTlBFA9Pg=
 github.com/swaggo/swag v1.16.3/go.mod h1:DImHIuOFXKpMFAQjcC7FG4m3Dg4+QuUgUzJmKjI/gRk=
-github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.765 h1:Du0gzA7g0eBDbw8bxBqecm8eSuJacWSkjBCI2Lc3ry8=
-github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.765/go.mod h1:7sCQWVkxcsR38nffDW057DRGk8mUjK1Ing/EFOK8s8Y=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.898 h1:ERwcXqhc94L9cFxtiI0pvt7IJtlHl/p/Jayl3mLw+ms=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.898/go.mod h1:r5r4xbfxSaeR04b166HGsBa/R4U3SueirEUpXGuw+Q0=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/lighthouse v1.0.898 h1:yBDoLgEZdA32tLIB4Km4XZ3D/VTz7u10ZWSfHOxuRGM=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/lighthouse v1.0.898/go.mod h1:Meye+aMxugD17rG+JAQxGQODOE0P/moOyf6DR8RYdWA=
 github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sms v1.0.765 h1:M9t7AJS0UHw8f2mP0BP5hRSn7wac/kg5V3IWHn6gSXg=
 github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sms v1.0.765/go.mod h1:ZvaWCT6R6cdME8e+cG/TjSv7wv61+07xIWrB6VDxuUk=
 github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/vms v1.0.765 h1:S9FPKUM+ttmh9a3/fVA2QnCU8Jx2UI6NGiyFgLw31D4=

@@ -2,8 +2,13 @@ package impl
 
 import (
 	"context"
+	"time"
 
+	"github.com/GeekQk/devcloud-mini/cmdb/apps/resource"
 	"github.com/GeekQk/devcloud-mini/cmdb/apps/secret"
+	"github.com/GeekQk/devcloud-mini/cmdb/provider"
+	"github.com/GeekQk/devcloud-mini/cmdb/provider/tecent"
+	"github.com/infraboard/mcube/v2/ioc/config/log"
 	"github.com/infraboard/mcube/v2/ioc/config/validator"
 	"github.com/rs/xid"
 	"go.mongodb.org/mongo-driver/bson"
@@ -58,5 +63,41 @@ func (i *impl) SyncResource(
 	ctx context.Context,
 	in *secret.SyncResourceRequest,
 	rh secret.SyncResourceHandler) error {
+
+	// 1. 找到secret
+	req := &secret.DescribeSecretRequest{Id: in.SecretId}
+	secret, err := i.DescribeSecret(ctx, req)
+	if err != nil {
+		return err
+	}
+
+	// 2. 初始化CVMProvider, 资源提供商列表
+	resourceProviders := []provider.ResourceProvider{}
+	for _, region := range in.Region {
+		conf := provider.ResourceSyncConfig{
+			ApiKey:    secret.Spec.Key,
+			ApiSecret: secret.Spec.Value,
+			Region:    region,
+		}
+		resourceProviders = append(resourceProviders,
+			&tecent.CvmProvider{ResourceSyncConfig: conf})
+	}
+
+	// 3. 使用 CVMProvider 进行资源同步
+	// 同步 进行资源同步，还是异步进行资源同步 (task)
+	// ctx 请求的context, 任务还需要继续进行
+	gctx, _ := context.WithTimeout(context.Background(), 1*time.Hour)
+	for _, rp := range resourceProviders {
+		//异步请求
+		go rp.Sync(gctx, i.SyncResoruce)
+	}
 	return nil
+}
+
+// 4. 将同步的结果 调用resource 录入
+func (i *impl) SyncResoruce(ctx context.Context, r *resource.Resource) {
+	_, err := i.resource.Save(ctx, r)
+	if err != nil {
+		log.L().Error().Msgf("save resource error, %s", err)
+	}
 }

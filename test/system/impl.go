@@ -1,9 +1,17 @@
 package system
 
-import "fmt"
+type Object interface {
+	GetInfo() string
+}
+
+var StrMapObj = make(map[string]Object)
 
 func init() {
-	fmt.Println("init: impl")
+	StrMapObj["host"] = &Host{}
+}
+
+type Hosts interface {
+	CreateHost(host string) error
 }
 
 type Host struct {

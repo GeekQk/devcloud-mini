@@ -21,8 +21,9 @@ type impl struct {
 	// 基础GRPC Server实现
 	resource.UnimplementedRPCServer
 
-	col *mongo.Collection
-	log *zerolog.Logger
+	col      *mongo.Collection
+	log      *zerolog.Logger
+	resource resource.Service
 }
 
 func (i *impl) Name() string {
@@ -34,5 +35,7 @@ func (i *impl) Init() error {
 	i.col = ioc_mongo.DB().Collection("secret")
 	// 模块日志
 	i.log = log.Sub(i.Name())
+	// 依赖的资源服务
+	i.resource = ioc.Controller().Get(resource.AppName).(resource.Service)
 	return nil
 }
