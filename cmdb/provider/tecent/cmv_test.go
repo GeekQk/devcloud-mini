@@ -2,6 +2,7 @@ package tecent_test
 
 import (
 	"context"
+	"os"
 	"testing"
 
 	"github.com/GeekQk/devcloud-mini/cmdb/apps/resource"
@@ -21,8 +22,8 @@ var ctx = context.Background()
 
 var client = &tecent.CvmProvider{
 	provider.ResourceSyncConfig{
-		ApiSecret: "zthUCjCoZHyjRBykVCj2CCZw6UtAF6sr",
-		ApiKey:    "AKIDDSm4OweGzytdFetBNXaRMPVgvaRhqqRI",
+		ApiSecret: os.Getenv("API_SECRET"),
+		ApiKey:    os.Getenv("API_KEY"),
 		Region:    "ap-guangzhou",
 	},
 }
