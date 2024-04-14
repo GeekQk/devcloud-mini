@@ -66,17 +66,22 @@ func (i *impl) SyncResource(
 
 	// 1. 找到secret
 	req := &secret.DescribeSecretRequest{Id: in.SecretId}
-	secret, err := i.DescribeSecret(ctx, req)
+	secretIns, err := i.DescribeSecret(ctx, req)
 	if err != nil {
 		return err
 	}
 
 	// 2. 初始化CVMProvider, 资源提供商列表
 	resourceProviders := []provider.ResourceProvider{}
-	for _, region := range in.Region {
+	//默认使用secret.Spec.Regions
+	region := []string{}
+	if len(in.Region) == 0 {
+		region = secretIns.Spec.Regions
+	}
+	for _, region := range region {
 		conf := provider.ResourceSyncConfig{
-			ApiKey:    secret.Spec.Key,
-			ApiSecret: secret.Spec.Value,
+			ApiKey:    secretIns.Spec.Key,
+			ApiSecret: secretIns.Spec.Value,
 			Region:    region,
 		}
 		resourceProviders = append(resourceProviders,
@@ -88,8 +93,23 @@ func (i *impl) SyncResource(
 	// ctx 请求的context, 任务还需要继续进行
 	gctx, _ := context.WithTimeout(context.Background(), 1*time.Hour)
 	for _, rp := range resourceProviders {
-		//异步请求
-		go rp.Sync(gctx, i.SyncResoruce)
+		// //异步请求:第一种方式
+		// rp.Sync(gctx, i.SyncResoruce)
+
+		//同步请求:第二种方式
+		rp.Sync(gctx, func(ctx context.Context, r *resource.Resource) {
+			_, err := i.resource.Save(ctx, r)
+			if err != nil {
+				//同步失败
+				log.L().Error().Msgf("save resource error, %s", err)
+			} else {
+				//同步成功
+				rh(&secret.SyncResponse{
+					Id:   r.Meta.Id,
+					Name: r.Spec.Name,
+				})
+			}
+		})
 	}
 	return nil
 }

@@ -22,7 +22,7 @@ func TestCreateSecret(t *testing.T) {
 
 func TestDescribeSecret(t *testing.T) {
 	req := &secret.DescribeSecretRequest{
-		Id: "cocvuetiika7m4ef8pv0",
+		Id: "codl29diika5eea8c050",
 	}
 	res, err := impl.DescribeSecret(ctx, req)
 	if err != nil {

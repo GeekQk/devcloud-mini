@@ -4,6 +4,8 @@ import (
 	"context"
 
 	"github.com/GeekQk/devcloud-mini/cmdb/apps/resource"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 // 给 secret模块提供的 资源同步方法
@@ -15,8 +17,10 @@ func (i *impl) Save(
 	// 实力数据填充
 	in.AutoFill()
 
+	// 如果没有则创建 有则更新
+	op := options.Update().SetUpsert(true)
 	// 保存Resoruce资源, 保存到 resource collection
-	_, err := i.col.InsertOne(ctx, in)
+	_, err := i.col.UpdateOne(ctx, bson.M{"_id": in.Meta.Id}, bson.M{"$set": in}, op)
 	if err != nil {
 		return nil, err
 	}
