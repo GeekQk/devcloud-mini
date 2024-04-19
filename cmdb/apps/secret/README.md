@@ -141,7 +141,7 @@ func (i *impl) Save(
 	// 如果没有则创建 如果有责更新
 	op := options.Update().SetUpsert(true)
 
-	_, err := i.col.UpdateOne(ctx, bson.M{"_id": in.Meta.Id}, bson.M{"$set": in}, op)
+	_, err := i.col.UpdateOne(ctx, bson.M{"_id": in.Meta.Id}, in, op)
 	if err != nil {
 		return nil, err
 	}

@@ -5,6 +5,7 @@ go 1.21.0
 require (
 	github.com/emicklei/go-restful/v3 v3.12.0
 	github.com/infraboard/mcenter v0.0.28
+	github.com/infraboard/mcube v1.19.22
 	github.com/infraboard/mcube/v2 v2.0.10
 	github.com/rs/xid v1.5.0
 	github.com/rs/zerolog v1.32.0
@@ -53,6 +54,7 @@ require (
 	github.com/redis/go-redis/extra/rediscmd/v9 v9.0.5 // indirect
 	github.com/redis/go-redis/extra/redisotel/v9 v9.0.5 // indirect
 	github.com/redis/go-redis/v9 v9.5.1 // indirect
+	github.com/robfig/cron/v3 v3.0.0 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect

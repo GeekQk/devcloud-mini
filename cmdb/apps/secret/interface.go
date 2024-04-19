@@ -31,13 +31,20 @@ type SyncResponse struct {
 	Error string
 }
 
+func (s *SyncResponse) Status() string {
+	if s.Error != "" {
+		return "失败"
+	}
+	return "成功"
+}
+
 type SyncResourceRequest struct {
 	// secret id
-	SecretId string
+	SecretId string `json:"secret_id"`
 	// 同步那些区域的资源
-	Region []string
+	Region []string `json:"region"`
 	// 同步那些类型的资源
-	Resource []resource.TYPE
+	Resource []resource.TYPE `json:"resouce"`
 }
 
 func NewCreateSecretRequest() *CreateSecretRequest {

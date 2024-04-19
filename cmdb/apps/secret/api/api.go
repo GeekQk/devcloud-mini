@@ -5,6 +5,8 @@ import (
 	"github.com/infraboard/mcube/v2/http/label"
 	"github.com/infraboard/mcube/v2/ioc"
 	"github.com/infraboard/mcube/v2/ioc/config/gorestful"
+	"github.com/infraboard/mcube/v2/ioc/config/log"
+	"github.com/rs/zerolog"
 )
 
 func init() {
@@ -14,6 +16,8 @@ func init() {
 type handler struct {
 	// 继承自Ioc对象
 	ioc.ObjectImpl
+	secret secret.Service
+	log    *zerolog.Logger
 }
 
 func (h *handler) Name() string {
@@ -21,6 +25,8 @@ func (h *handler) Name() string {
 }
 
 func (h *handler) Init() error {
+	h.secret = ioc.Controller().Get(secret.AppName).(secret.Service)
+	h.log = log.Sub(h.Name())
 	// 对象在初始化的时候 ，就注册给Router
 	// Router, 是一个全局对象,
 	// 更加当前对象的信息, 来生成一个子路由: r.Group(aa)
@@ -38,21 +44,17 @@ func (h *handler) Init() error {
 	// )
 	// 传递路由规则:  GET  Handler
 	ws.Route(
-		//  /cmdb/api/v1/secret
-		//  cmdb从配置文件中获取的
-		//  前缀默认是api 版本默认是v1
-		//  secret 对象名称 是在读取的secret.AppName
-		//  规则:applicaiton.app.name + "/api/v1/" + secret.AppName,
-		ws.GET("/").
-			To(h.CreateSecret).
-			Doc("创建Secret").
-			Metadata("Resource", "Secret").
-			Metadata("Action", "Create").
+		//  /cmdb/api/v1/secret/xxxx/sync
+		ws.POST("/{id}/sync").
+			To(h.SyncResource).
+			Doc("资源同步").
 			// 开启了鉴权
 			Metadata(label.Auth, label.Enable).
-			//资源描述
+			// 资源描述
 			Metadata(label.Resource, "Secret").
-			Metadata(label.Action, label.Create.Value()),
+			Metadata(label.Action, "sync").
+			// 开启鉴权
+			Metadata(label.Permission, label.Enable),
 	)
 
 	return nil

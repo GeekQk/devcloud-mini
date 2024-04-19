@@ -76,7 +76,8 @@ type Secret struct {
 	// @gotags: json:"id" bson:"_id"
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id" bson:"_id"` // secret id
 	// 创建secret的请求
-	Spec *CreateSecretRequest `protobuf:"bytes,4,opt,name=spec,proto3" json:"spec,omitempty"`
+	// @gotags: json:"spec" bson:",inline"
+	Spec *CreateSecretRequest `protobuf:"bytes,4,opt,name=spec,proto3" json:"spec" bson:",inline"`
 }
 
 func (x *Secret) Reset() {
