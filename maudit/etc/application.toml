@@ -1,0 +1,3 @@
+[audit_consumer]
+group_id = "audit_default_group"
+topic = "topic-A"

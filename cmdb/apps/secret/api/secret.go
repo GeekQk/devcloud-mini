@@ -3,17 +3,20 @@ package api
 import (
 	"github.com/GeekQk/devcloud-mini/cmdb/apps/secret"
 	"github.com/emicklei/go-restful/v3"
-	"github.com/infraboard/mcube/http/response"
+	"github.com/infraboard/mcenter/apps/token"
+	"github.com/infraboard/mcube/v2/http/restful/response"
 )
 
-// 写一个 go restful 框架的Handler
-// 使用的v3版本
-// GoRestful (r *restful.Request, w *restful.Response)
 func (h *handler) SyncResource(r *restful.Request, w *restful.Response) {
 	req := &secret.SyncResourceRequest{}
 	if err := r.ReadEntity(req); err != nil {
 		response.Failed(w, err)
 		return
+	}
+
+	tk := token.GetTokenFromRequest(r)
+	if tk != nil {
+		h.log.Debug().Msgf("user: %s", tk.Username)
 	}
 
 	req.SecretId = r.PathParameter("id")

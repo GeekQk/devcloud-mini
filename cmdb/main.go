@@ -19,6 +19,9 @@ import (
 
 	//服务功能列表中间件
 	_ "github.com/infraboard/mcenter/clients/rpc/middleware/registry/endpoint"
+
+	// 审计日志中间件
+	_ "github.com/GeekQk/devcloud-mini/maudit/clients/middleware"
 )
 
 func main() {
