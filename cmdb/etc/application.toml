@@ -25,3 +25,12 @@
 address = "127.0.0.1:17080"
 client_id = "M7LmSqFgitbqE9sckoZP2vZY"
 client_secret = "ZcpbNEftiIP04ErVdEn29mHosTYYr0FL"
+
+[audit_consumer]
+topic = "topic-A"
+
+[trace]
+  enable = false
+  provider = "otlp"
+  endpoint = "127.0.0.1:4318"
+  insecure = true

@@ -21,3 +21,10 @@
   # Swagger API Doc URL路径, 默认自动生成带前缀的地址比如: /default/api/v1/apidoc 
   # 你也可以在这里直接配置绝对路径 比如: /apidocs.json
   path = "/apidocs.json"
+
+
+[trace]
+  enable = false
+  provider = "otlp"
+  endpoint = "127.0.0.1:4318"
+  insecure = true
