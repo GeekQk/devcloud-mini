@@ -1,6 +1,6 @@
 module github.com/GeekQk/devcloud-mini/maudit
 
-go 1.22.2
+go 1.22.1
 
 require (
 	github.com/emicklei/go-restful/v3 v3.12.0
